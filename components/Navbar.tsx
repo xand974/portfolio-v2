@@ -12,20 +12,16 @@ export default function Navbar() {
       tag: "home",
     },
     {
+      title: "About me",
+      tag: "aboutMe",
+    },
+    {
       title: "Projects",
       tag: "projects",
     },
     {
       title: "Skills",
       tag: "skills",
-    },
-    {
-      title: "About me",
-      tag: "aboutMe",
-    },
-    {
-      title: "Contacts",
-      tag: "contacts",
     },
   ];
   return (
