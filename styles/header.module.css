@@ -1,0 +1,15 @@
+.header {
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header__title {
+  font-size: 7rem;
+  letter-spacing: 20px;
+  color: var(--dark-blue);
+}

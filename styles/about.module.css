@@ -1,0 +1,19 @@
+.about {
+  height: 100vh;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.about__title {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--dark-blue);
+}
+
+.about__content {
+  text-align: justify;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: var(--mid-gray);
+}

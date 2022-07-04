@@ -1,0 +1,39 @@
+.gallery {
+  height: 100vh;
+  display: flex;
+  width: 90%;
+  margin: 50px auto;
+}
+.text {
+  text-align: left;
+  width: 90%;
+  margin-bottom: 10px;
+  color: gray;
+}
+.big__container,
+.small__container {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.small__container {
+  justify-content: flex-end;
+}
+
+.image__small,
+.image__big {
+  position: relative;
+  width: 90%;
+}
+
+.image__small {
+  height: 50%;
+}
+
+.image__big {
+  height: 90%;
+}
