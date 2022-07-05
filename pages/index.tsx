@@ -9,8 +9,12 @@ import AnotherGallery from "../components/AnotherGallery";
 import Slider from "../components/Slider";
 import Skills from "../components/Skills";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
+import { useAppSelector } from "../context/hooks/context.hook";
+import Modal from "../modal/Modal";
 
 const Home: NextPage = () => {
+  const { open, element } = useAppSelector((state) => state.modal);
   return (
     <div className={styles.container}>
       <Head>
@@ -26,6 +30,8 @@ const Home: NextPage = () => {
       <Slider />
       <Skills />
       <Footer />
+      <Contact />
+      {open ? <Modal child={element} /> : <></>}
     </div>
   );
 };

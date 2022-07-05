@@ -4,6 +4,7 @@
   --dark-blue: #060526;
   --light-gray: #efefef;
   --mid-gray: #191919;
+  --primary-ff: "Raleway", sans-serif;
 }
 
 *,
@@ -16,7 +17,7 @@
 
 body {
   min-height: 100vh;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-ff);
   background: var(--light-gray);
 }
 

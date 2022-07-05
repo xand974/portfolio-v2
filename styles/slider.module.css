@@ -1,4 +1,16 @@
 .slider {
   height: 100vh;
-  background: blue;
+  background: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 40px 100px;
+}
+.slider__top {
+  flex: 1;
+}
+
+.slider__bottom {
+  flex: 4;
+  display: flex;
+  align-items: center;
 }

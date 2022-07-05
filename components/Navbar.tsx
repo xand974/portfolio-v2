@@ -23,6 +23,10 @@ export default function Navbar() {
       title: "Skills",
       tag: "skills",
     },
+    {
+      title: "Contact",
+      tag: "contact",
+    },
   ];
   return (
     <nav className={style.navbar}>

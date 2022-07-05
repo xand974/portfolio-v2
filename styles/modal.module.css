@@ -1,0 +1,25 @@
+.modal {
+  position: fixed;
+
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  z-index: 10;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #3333337a;
+  width: 130vw;
+  height: 115vw;
+  top: -50vh;
+  left: -50vw;
+}
+
+.modal__text {
+}
