@@ -1,8 +1,13 @@
 .link {
+  position: relative;
+  transition: all 0.3s ease-in;
   font-size: 1.3rem;
-  cursor: pointer;
 
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.link__text {
+  cursor: pointer;
 }

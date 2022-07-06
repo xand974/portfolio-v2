@@ -1,4 +1,26 @@
 .footer {
-  height: 30vh;
-  background: red;
+  height: 10vh;
+  box-shadow: 0px -12px 19px 0px #e0e0e0;
+}
+
+.footer__wrapper {
+  width: 90%;
+  height: 100%;
+
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.footer__left {
+  flex: 1;
+}
+.footer__right {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__right a {
+  margin-left: 10px;
 }

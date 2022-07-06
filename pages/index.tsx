@@ -22,15 +22,17 @@ const Home: NextPage = () => {
         <meta name="description" content="Alexandre Malet's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <Header />
-      <Gallery />
-      <About />
-      <AnotherGallery />
-      <Slider />
-      <Skills />
+      <div className={styles.content}>
+        <Navbar />
+        <Header />
+        <Gallery />
+        <About />
+        <AnotherGallery />
+        <Slider />
+        <Skills />
+        <Contact />
+      </div>
       <Footer />
-      <Contact />
       {open ? <Modal child={element} /> : <></>}
     </div>
   );

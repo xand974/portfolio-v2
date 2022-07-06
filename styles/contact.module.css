@@ -1,7 +1,8 @@
 .contact {
-  position: fixed;
-  bottom: 20px;
-  right: 5%;
+  position: sticky;
+  margin-bottom: 40px;
+  margin-left: auto;
+  width: 20%;
 }
 
 .contact__button {

@@ -7,8 +7,10 @@ export default function CustomLink({ title, tag }: LinkType) {
     console.log(tag);
   };
   return (
-    <li className={style.link} onClick={() => goTo(tag)}>
-      {title}
+    <li className={style.link}>
+      <span onClick={() => goTo(tag)} className={style.link__text}>
+        {title}
+      </span>
     </li>
   );
 }
