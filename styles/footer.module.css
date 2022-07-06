@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;300&family=Neonderthaw&display=swap");
+
 .footer {
   height: 10vh;
   box-shadow: 0px -12px 19px 0px #e0e0e0;
@@ -23,4 +25,16 @@
 
 .footer__right a {
   margin-left: 10px;
+}
+.footer__right__svg {
+  position: relative;
+  top: 1px;
+
+  width: 22px;
+  height: 22px;
+}
+.footer__left span:nth-of-type(1) {
+  font-weight: lighter;
+  font-family: "Neonderthaw", cursive;
+  margin-right: 10px;
 }

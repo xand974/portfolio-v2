@@ -5,10 +5,7 @@
   z-index: 1000;
 }
 
-.navbar__container {
-  position: relative;
-}
-
+.navbar__container__btn__collapse,
 .navbar__container__btn {
   padding: 7px 7px 4px 7px;
   border: 1px solid white;
@@ -17,15 +14,29 @@
   cursor: pointer;
 }
 
+.navbar__container__btn__collapse {
+  background: white;
+  color: var(--dark-blue);
+  margin-bottom: 100px;
+  transition: all 0.3s ease;
+}
+
+.navbar__container__btn__collapse:hover {
+  box-shadow: 0 0 20px white;
+}
+
 .navbar__container__btn__icon {
   color: white;
 }
 
 .navbar__list {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: -20px;
   right: 0;
-
-  width: 200px;
-  height: 200px;
+  width: 25vw;
+  height: 100vw;
+  background: #000;
+  box-shadow: -8px 1px 14px 0px #fffdfd;
+  padding: 50px 20px;
+  transition: all 0.3s ease-in;
 }

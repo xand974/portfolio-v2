@@ -30,7 +30,7 @@
 
 .cadre__image__sm__text {
   position: absolute;
-  z-index: 1000;
+  z-index: 900;
   bottom: 30px;
   color: gray;
 }

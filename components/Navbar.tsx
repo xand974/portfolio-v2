@@ -1,4 +1,4 @@
-import { MenuOutlined } from "@mui/icons-material";
+import { CloseOutlined, MenuOutlined } from "@mui/icons-material";
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/navbar.module.css";
 import { LinkType } from "../types/link";
@@ -9,10 +9,11 @@ export default function Navbar() {
   const [list, setList] = useState<HTMLLIElement[]>([]);
   const listRef = useRef<HTMLUListElement>(null);
 
-  useEffect(() => {
-    getListItems();
-    setPositionRecursively(list, 1);
-  }, [listRef]);
+  //#region  wip
+  // useEffect(() => {
+  //   getListItems();
+  //   setPositionRecursively(list, 1);
+  // }, [listRef]);
 
   const getListItems = () => {
     if (!listRef.current) return;
@@ -46,6 +47,9 @@ export default function Navbar() {
   const goTo = (title: string): any => {
     console.log(title);
   };
+
+  //#endregion
+
   const menuItems: LinkType[] = [
     {
       title: "Home",
@@ -70,23 +74,30 @@ export default function Navbar() {
   ];
   return (
     <nav className={styles.navbar}>
-      <div
-        className={styles.navbar__container}
-        onMouseEnter={mouseEnter}
-        onMouseLeave={mouseLeave}
-      >
-        <button className={styles.navbar__container__btn}>
+      <div className={styles.navbar__container}>
+        <button
+          className={styles.navbar__container__btn}
+          onClick={() => setExpand(true)}
+        >
           <MenuOutlined className={styles.navbar__container__btn__icon} />
         </button>
-        {expand ? (
-          <ul className={styles.navbar__list} ref={listRef}>
-            {menuItems.map((item, index) => (
-              <CustomLink title={item.title} tag={item.tag} key={index} />
-            ))}
-          </ul>
-        ) : (
-          <></>
-        )}
+        <ul
+          className={styles.navbar__list}
+          ref={listRef}
+          style={{
+            transform: expand ? `translateX(0vw)` : `translateX(25vw)`,
+          }}
+        >
+          <button
+            className={styles.navbar__container__btn__collapse}
+            onClick={() => setExpand(false)}
+          >
+            <CloseOutlined />
+          </button>
+          {menuItems.map((item, index) => (
+            <CustomLink title={item.title} tag={item.tag} key={index} />
+          ))}
+        </ul>
       </div>
     </nav>
   );
