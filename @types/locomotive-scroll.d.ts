@@ -191,7 +191,14 @@ declare module "locomotive-scroll" {
       }
     ): void;
     setScroll(x: number, y: number): void;
-    on(event: "call" | "scroll", func: (data: string | string[]) => void): void;
+    on(
+      event: "call" | "scroll",
+      func: (data: {
+        currentElements: { [key: number]: HTMLElement }[];
+        scroll: { x: number; y: number };
+        limit: { x: number; y: number };
+      }) => void
+    ): void;
     destroy(): void;
   }
 

@@ -1,4 +1,4 @@
-import styles from "../styles/slider-item.module.css";
+import styles from "../styles/slider-item.module.scss";
 import Image from "next/image";
 export default function SliderItem() {
   return (

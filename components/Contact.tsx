@@ -1,4 +1,4 @@
-import styles from "../styles/contact.module.css";
+import styles from "../styles/contact.module.scss";
 import { EmailOutlined } from "@mui/icons-material";
 import { ModalService } from "../modal/modal.service";
 import ContactForm from "./ContactForm";

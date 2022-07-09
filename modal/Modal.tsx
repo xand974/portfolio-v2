@@ -1,4 +1,4 @@
-import styles from "../styles/modal.module.css";
+import styles from "../styles/modal.module.scss";
 import { ModalType } from "../types/modal";
 
 export default function Modal({ child }: ModalType) {

@@ -1,6 +1,6 @@
 import { CloseOutlined, MenuOutlined } from "@mui/icons-material";
 import { useEffect, useRef, useState } from "react";
-import styles from "../styles/navbar.module.css";
+import styles from "../styles/navbar.module.scss";
 import { LinkType } from "../types/link";
 import CustomLink from "./CustomLink";
 

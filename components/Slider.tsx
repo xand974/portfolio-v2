@@ -1,4 +1,4 @@
-import styles from "../styles/slider.module.css";
+import styles from "../styles/slider.module.scss";
 import SliderItem from "./SliderItem";
 
 export default function Slider() {

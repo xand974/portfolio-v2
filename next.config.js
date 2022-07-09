@@ -1,3 +1,12 @@
+const env = process.env.NODE_ENV;
+let basePath = "",
+  assetPrefix = "";
+if (env == "development") {
+  basePath = assetPrefix = "";
+} else {
+  basePath = assetPrefix = "/portfolio-v2";
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -6,8 +15,8 @@ const nextConfig = {
     loader: "akamai",
     path: "",
   },
-  basePath: "/portfolio-v2",
-  assetPrefix: "/portfolio-v2",
+  basePath,
+  assetPrefix,
 };
 
 module.exports = nextConfig;

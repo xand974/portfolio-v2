@@ -1,7 +1,7 @@
 import React from "react";
 import { ModalService } from "../modal/modal.service";
 import { useDispatch } from "react-redux";
-import styles from "../styles/contact-form.module.css";
+import styles from "../styles/contact-form.module.scss";
 
 export default function ContactForm() {
   const dispatch = useDispatch();

@@ -10,7 +10,6 @@ type Props = {
   loading?: boolean;
 } & Omit<LocomotiveScrollOptions, "el">;
 
-// @ts-ignore
 export const useLocoScroll = ({
   loading,
   ref,
@@ -20,7 +19,6 @@ export const useLocoScroll = ({
   useEffect(() => {
     if (!ref || !ref.current) return;
 
-    // @ts-ignore
     import("locomotive-scroll").then((LocomotiveScroll) => {
       locomotiveScrollRef.current = new LocomotiveScroll.default({
         ...otherProps,

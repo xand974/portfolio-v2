@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../styles/link.module.css";
+import style from "../styles/link.module.scss";
 import { LinkType } from "../types";
 
 export default function CustomLink({ title, tag }: LinkType) {
