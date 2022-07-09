@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "../styles/cadre.module.scss";
 import { CadreType } from "../types/cadre";
+import { useOnScreen } from "../hooks/on-screen.hook";
 
 export default function Cadre({ reverse = false }: CadreType) {
+
+  const cadreRef = useRef<HTMLDivElement>(null);
+  const isOnScreen = useOnScreen(cadreRef);
+  
+  useEffect(() => {
+    if(!isOnScreen) return;
+    if(!cadreRef || !cadreRef.current) return;
+
+    const img = cadreRef.current.querySelector("#img-path") as HTMLDivElement
+    if(!img) return;
+    img.style.clipPath = "clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
+  }, [isOnScreen])
+  
   return (
     <div
+      ref={cadreRef}
       className={styles.cadre}
+      data-scroll
       style={{ flexDirection: reverse ? "row-reverse" : "row" }}
     >
       <span
@@ -21,7 +37,7 @@ export default function Cadre({ reverse = false }: CadreType) {
         Small One
       </span>
 
-      <div className={styles.cadre__image} data-scroll>
+      <div className={styles.cadre__image} id="img-path">
         <Image
           alt="et si"
           layout="fill"

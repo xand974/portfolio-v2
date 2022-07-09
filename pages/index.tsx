@@ -12,9 +12,8 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import { useAppSelector } from "../hooks/context.hook";
 import Modal from "../modal/Modal";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Loading from "../components/Loading";
-import { useLocoScroll } from "../hooks/locomotive.hook";
 import Layout from "../components/Layout";
 
 const Home: NextPage = () => {
