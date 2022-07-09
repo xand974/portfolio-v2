@@ -10,7 +10,7 @@ export default function Contact() {
     ModalService.Open(<ContactForm />, dispatch);
   };
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} data-scroll-section>
       <button
         className={styles.contact__button}
         onClick={() => openMessageModal()}

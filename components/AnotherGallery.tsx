@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AnotherGallery() {
   return (
-    <section className={styles.gallery}>
+    <section className={styles.gallery} data-scroll-section>
       <div className={styles.big__container}>
         <p className={styles.text}>Image Big</p>
         <div className={styles.image__big}>

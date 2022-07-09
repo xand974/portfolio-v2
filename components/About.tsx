@@ -2,7 +2,7 @@ import styles from "../styles/about.module.css";
 
 export default function About() {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} data-scroll-section>
       <h2 id="about" className={styles.about__title}>
         About
       </h2>
