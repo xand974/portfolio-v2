@@ -6,10 +6,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
 
-.header__title {
-  font-size: 7rem;
-  letter-spacing: 20px;
-  color: var(--dark-blue);
+  &__title {
+    font-size: 7rem;
+    letter-spacing: 20px;
+    color: var(--dark-blue);
+  }
 }

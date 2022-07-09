@@ -14,6 +14,7 @@ export default function Footer() {
         </div>
         <div className={styles.footer__right}>
           <a
+            rel="noreferrer"
             href="https://www.notion.so/malet/Doc_Web-1a167140aafd4540909b8b46575e31ee"
             target="_blank"
           >
@@ -24,11 +25,15 @@ export default function Footer() {
               />
             </div>
           </a>
-          <a href="https://github.com/xand974" target="_blank">
+          <a rel="noreferrer" href="https://github.com/xand974" target="_blank">
             <GitHub className={styles.footer__right__icon} />
           </a>
-          <a href="https://www.linkedin.com/in/alexandre-malet-5a3432208/">
-            <LinkedIn target="_blank" className={styles.footer__right__icon} />
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/alexandre-malet-5a3432208/"
+          >
+            <LinkedIn className={styles.footer__right__icon} />
           </a>
         </div>
       </div>
