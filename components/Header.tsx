@@ -1,4 +1,4 @@
-import style from "../styles/header.module.scss";
+import styles from "../styles/header.module.scss";
 import gsap from "gsap";
 // @ts-ignore
 import SplitText from "split-text-js";
@@ -20,9 +20,9 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={style.header} data-scroll-section>
+    <header className={styles.header} data-scroll-section>
       <h1
-        className={style.header__title}
+        className={`${styles.header__title} ${styles.header__title__space}`}
         data-scroll
         data-scroll-speed="1"
         ref={firstNameRef}
@@ -31,7 +31,7 @@ export default function Header() {
       </h1>
       <br />
       <h1
-        className={style.header__title}
+        className={styles.header__title}
         data-scroll
         data-scroll-speed="2"
         ref={lastNameRef}

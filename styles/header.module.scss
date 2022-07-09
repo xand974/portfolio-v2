@@ -1,6 +1,5 @@
 .header {
-  height: calc(100vh - 80px);
-  margin-top: 80px;
+  height: 100vh;
 
   display: flex;
   align-items: center;
@@ -8,6 +7,9 @@
   flex-direction: column;
 
   &__title {
+    &__space  {
+      margin-top: 80px;
+    }
     font-size: 7rem;
     letter-spacing: 20px;
     color: var(--dark-blue);

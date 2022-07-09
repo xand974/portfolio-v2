@@ -10,11 +10,12 @@
   flex: 3;
   clip-path: polygon(0 0, 57% 0, 56% 100%, 0% 100%);
   transition: all 0.3s ease;
-  &.is-reveal {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
 }
 
+.is-reveal {
+  border: 2px solid red;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
 .cadre__container {
   display: flex;
   flex-direction: column;

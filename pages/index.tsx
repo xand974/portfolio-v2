@@ -15,9 +15,9 @@ import Modal from "../modal/Modal";
 import { useState, useRef, useEffect } from "react";
 import Loading from "../components/Loading";
 import { useLocoScroll } from "../hooks/locomotive.hook";
+import Layout from "../components/Layout";
 
 const Home: NextPage = () => {
-  const containerRef = useRef(null);
   const { open, element } = useAppSelector((state) => state.modal);
   const [loading, setLoading] = useState(true);
   const [timer, setTimer] = useState(2);
@@ -40,14 +40,6 @@ const Home: NextPage = () => {
   // }, [timer]);
 
   // if (loading) return <Loading />;
-  const [locomotiveRef] = useLocoScroll({
-    inertia: 0.6,
-    ref: containerRef,
-    smooth: true,
-    smoothMobile: true,
-    multiplier: 1,
-    class: "is-reveal",
-  });
 
   return (
     <div className={styles.container}>
@@ -56,12 +48,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Alexandre Malet's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        className={styles.content}
-        id="main-container"
-        data-scroll-container
-        ref={containerRef}
-      >
+      <Layout>
         <Navbar />
         <Header />
         <Gallery />
@@ -70,8 +57,8 @@ const Home: NextPage = () => {
         <Slider />
         <Skills />
         <Contact />
-      </div>
-      <Footer />
+        <Footer />
+      </Layout>
       {open ? <Modal child={element} /> : <></>}
     </div>
   );

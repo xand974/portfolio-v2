@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-// @ts-ignore
 import { LocomotiveScrollOptions, Scroll } from "locomotive-scroll";
 type UseLocomotiveScrollHook = [React.RefObject<Scroll>];
 
@@ -18,6 +17,9 @@ export const useLocoScroll = ({
   const locomotiveScrollRef = useRef<Scroll | null>(null);
   useEffect(() => {
     if (!ref || !ref.current) return;
+    console.log(ref);
+
+    console.log("trigger");
 
     import("locomotive-scroll").then((LocomotiveScroll) => {
       locomotiveScrollRef.current = new LocomotiveScroll.default({
