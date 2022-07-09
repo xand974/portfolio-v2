@@ -23,6 +23,7 @@ export default function Cadre({ reverse = false }: CadreType) {
 
       <div className={styles.cadre__image} data-scroll>
         <Image
+          alt="et si"
           layout="fill"
           src={
             "https://images.unsplash.com/photo-1541657152021-21efeed08add?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"

@@ -20,6 +20,7 @@ export default function Footer() {
           >
             <div className={styles.footer__right__svg}>
               <Image
+                alt="et si"
                 src="https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg"
                 layout="fill"
               />
