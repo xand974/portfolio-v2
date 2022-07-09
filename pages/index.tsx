@@ -18,9 +18,9 @@ import Layout from "../components/Layout";
 
 const Home: NextPage = () => {
   const { open, element } = useAppSelector((state) => state.modal);
-  const [loading, setLoading] = useState(true);
-  const [timer, setTimer] = useState(2);
-  const intervalRef = useRef<NodeJS.Timer>();
+  // const [loading, setLoading] = useState(true);
+  // const [timer, setTimer] = useState(2);
+  // const intervalRef = useRef<NodeJS.Timer>();
 
   // const clear = () => {
   //   clearInterval(intervalRef.current);
