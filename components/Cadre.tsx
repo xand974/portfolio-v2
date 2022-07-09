@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/cadre.module.css";
+import styles from "../styles/cadre.module.scss";
 import { CadreType } from "../types/cadre";
 
 export default function Cadre({ reverse = false }: CadreType) {
@@ -36,16 +36,16 @@ export default function Cadre({ reverse = false }: CadreType) {
         <h3
           className={styles.cadre__container__title}
           data-scroll
-          data-scroll-speed="3"
-          data-scroll-delay="0.4"
+          data-scroll-speed="0.6"
+          data-scroll-delay="0.1"
         >
           Lorem ipsum dolor sit.
         </h3>
         <p
           className={styles.cadre__container__text}
           data-scroll
-          data-scroll-speed="4"
-          data-scroll-delay="0.9"
+          data-scroll-speed="1"
+          data-scroll-delay="0.4"
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus,
           minus. Nisi nihil consequuntur earum rerum alias quasi quo libero

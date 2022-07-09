@@ -11,5 +11,10 @@
     font-size: 7rem;
     letter-spacing: 20px;
     color: var(--dark-blue);
+    overflow: hidden;
+    span.line-reveal {
+      transform: translateY(600px);
+      background: red;
+    }
   }
 }

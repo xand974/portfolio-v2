@@ -16,12 +16,14 @@
     "@mui/material": "^5.8.7",
     "@reduxjs/toolkit": "^1.8.3",
     "@types/react-redux": "^7.1.24",
+    "gsap": "^3.10.4",
     "locomotive-scroll": "^4.1.4",
     "next": "12.2.0",
     "node-sass": "^7.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-redux": "^8.0.2"
+    "react-redux": "^8.0.2",
+    "split-text-js": "^1.0.3"
   },
   "devDependencies": {
     "@types/node": "18.0.1",

@@ -8,6 +8,11 @@
   position: relative;
   width: 100%;
   flex: 3;
+  clip-path: polygon(0 0, 57% 0, 56% 100%, 0% 100%);
+  transition: all 0.3s ease;
+  &.is-reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 .cadre__container {
@@ -19,7 +24,7 @@
 }
 
 .cadre__container__title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 1.3rem;
 }
 .cadre__container__text {
