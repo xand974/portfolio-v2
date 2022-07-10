@@ -53,23 +53,23 @@ export default function Navbar() {
   const menuItems: LinkType[] = [
     {
       title: "Home",
-      tag: "home",
+      link: "/",
     },
     {
       title: "About me",
-      tag: "aboutMe",
+      link: "/aboutMe",
     },
     {
       title: "Projects",
-      tag: "projects",
+      link: "/projects",
     },
     {
       title: "Skills",
-      tag: "skills",
+      link: "/skills",
     },
     {
       title: "Contact",
-      tag: "contact",
+      link: "/contact",
     },
   ];
   return (
@@ -95,7 +95,7 @@ export default function Navbar() {
             <CloseOutlined />
           </button>
           {menuItems.map((item, index) => (
-            <CustomLink title={item.title} tag={item.tag} key={index} />
+            <CustomLink title={item.title} link={item.link} key={index} />
           ))}
         </ul>
       </div>
