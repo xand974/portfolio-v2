@@ -7,6 +7,9 @@
   --primary-ff: "Raleway", sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 *,
 ::before,
 ::after {
