@@ -1,14 +1,20 @@
 import { RefObject, useEffect, useState } from "react";
 
-export const useOnScreen = (ref: RefObject<HTMLElement>): boolean => {
+export const useOnScreen = (
+  ref: RefObject<HTMLElement>,
+  rootMargin: string = "10px",
+  threshold = 0.3
+): [boolean, IntersectionObserverEntry] => {
   const [isOnScreen, setIsOnScreen] = useState(false);
+  const [entry, setEntry] = useState({} as IntersectionObserverEntry);
   useEffect(() => {
     const callback = ([entry]: IntersectionObserverEntry[]) => {
       setIsOnScreen(entry.isIntersecting ?? false);
+      setEntry(entry);
     };
     const intersection = new IntersectionObserver(callback, {
-      threshold: 0.3,
-      rootMargin: "10px",
+      threshold,
+      rootMargin,
     });
 
     const currentElement = ref.current;
@@ -20,5 +26,5 @@ export const useOnScreen = (ref: RefObject<HTMLElement>): boolean => {
       if (currentElement) intersection.unobserve(currentElement);
     };
   }, [ref]);
-  return isOnScreen;
+  return [isOnScreen, entry];
 };

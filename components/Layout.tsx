@@ -15,14 +15,6 @@ export default function Layout({ children }: LayoutType) {
     multiplier: 1,
     class: "is-reveal",
   });
-
-  useEffect(() => {
-    console.log(locomotiveRef);
-    if (!locomotiveRef) return;
-    locomotiveRef.current?.on("scroll", (data) => {
-      console.log(data.currentElements);
-    });
-  }, [locomotiveRef]);
   return (
     <div data-scroll-container id="main-container" ref={containerRef}>
       {children}

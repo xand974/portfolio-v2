@@ -2,7 +2,10 @@ import styles from "../styles/slider-item.module.scss";
 import Image from "next/image";
 export default function SliderItem() {
   return (
-    <div className={styles.slider__item}>
+    <section
+      className={`${styles.slider__item}  slider__item--scroll`}
+      data-scroll-section
+    >
       <div className={styles.slider__item__wrapper}>
         <Image
           alt="et si"
@@ -18,6 +21,6 @@ export default function SliderItem() {
         <h2 className={styles.slider__item__title}>This Title</h2>
         <h3 className={styles.slider__item__subtitle}>That another one</h3>
       </div>
-    </div>
+    </section>
   );
 }

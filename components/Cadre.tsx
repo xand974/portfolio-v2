@@ -3,21 +3,22 @@ import Image from "next/image";
 import styles from "../styles/cadre.module.scss";
 import { CadreType } from "../types/cadre";
 import { useOnScreen } from "../hooks/on-screen.hook";
+import cls from "classnames";
 
 export default function Cadre({ reverse = false }: CadreType) {
-
   const cadreRef = useRef<HTMLDivElement>(null);
-  const isOnScreen = useOnScreen(cadreRef);
-  
-  useEffect(() => {
-    if(!isOnScreen) return;
-    if(!cadreRef || !cadreRef.current) return;
+  const [isOnScreen] = useOnScreen(cadreRef);
 
-    const img = cadreRef.current.querySelector("#img-path") as HTMLDivElement
-    if(!img) return;
-    img.style.clipPath = "clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
-  }, [isOnScreen])
-  
+  const getExpandCadreStyle = cls({
+    [styles["cadre__image--expand"]]: isOnScreen,
+    [styles.cadre__image]: !isOnScreen,
+  });
+
+  const getSpanRotationStyle = cls(styles.cadre__image__sm__text, {
+    [styles["cadre__image__sm__text--original"]]: !reverse,
+    [styles["cadre__image__sm__text--reverse"]]: reverse,
+  });
+
   return (
     <div
       ref={cadreRef}
@@ -25,19 +26,11 @@ export default function Cadre({ reverse = false }: CadreType) {
       data-scroll
       style={{ flexDirection: reverse ? "row-reverse" : "row" }}
     >
-      <span
-        data-scroll
-        className={styles.cadre__image__sm__text}
-        style={{
-          transform: `rotate(${reverse ? "90deg" : "-90deg"})`,
-          right: reverse ? "-50px" : "initial",
-          left: reverse ? "initial" : "-50px",
-        }}
-      >
-        Small One
+      <span data-scroll className={getSpanRotationStyle} style={{}}>
+        Small One {reverse ? "yes" : "no"}
       </span>
 
-      <div className={styles.cadre__image} id="img-path">
+      <div className={getExpandCadreStyle} id="img-path">
         <Image
           alt="et si"
           layout="fill"

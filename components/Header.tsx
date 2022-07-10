@@ -1,20 +1,15 @@
 import styles from "../styles/header.module.scss";
-import gsap from "gsap";
-// @ts-ignore
-import SplitText from "split-text-js";
 import { useEffect, useRef } from "react";
-import { moveToTop } from "../utils/gsap-utils";
+import { getSplitSpan, moveToTop } from "../utils/animations-utils";
 
 export default function Header() {
-  const firstNameRef = useRef(null);
-  const lastNameRef = useRef(null);
+  const firstNameRef = useRef<HTMLHeadingElement>(null);
+  const lastNameRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    if (!firstNameRef || !lastNameRef) return;
-    const firstName = new SplitText(firstNameRef.current);
-    const lastName = new SplitText(lastNameRef.current);
-    const firstNameChars = firstName.chars as HTMLSpanElement[];
-    const lastNameChars = lastName.chars as HTMLSpanElement[];
+    const firstNameChars = getSplitSpan(firstNameRef);
+    const lastNameChars = getSplitSpan(lastNameRef);
+    if (!firstNameChars || !lastNameChars) return;
     const chars = [...firstNameChars, ...lastNameChars];
     moveToTop(chars);
   }, []);

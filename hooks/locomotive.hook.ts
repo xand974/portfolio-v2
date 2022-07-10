@@ -1,5 +1,9 @@
 import { useEffect, useRef } from "react";
 import { LocomotiveScrollOptions, Scroll } from "locomotive-scroll";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
 type UseLocomotiveScrollHook = [React.RefObject<Scroll>];
 
 type Props = {
@@ -17,9 +21,6 @@ export const useLocoScroll = ({
   const locomotiveScrollRef = useRef<Scroll | null>(null);
   useEffect(() => {
     if (!ref || !ref.current) return;
-    console.log(ref);
-
-    console.log("trigger");
 
     import("locomotive-scroll").then((LocomotiveScroll) => {
       locomotiveScrollRef.current = new LocomotiveScroll.default({
