@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useLocoScroll } from "../hooks/locomotive.hook";
+import { useLocoScroll } from "@/hooks/locomotive.hook";
 
 type LayoutType = {
   children: React.ReactNode;

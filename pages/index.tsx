@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
-import { useAppSelector } from "../hooks/context.hook";
-import Modal from "../modal/Modal";
+import styles from "@/styles/Home.module.scss";
+import { useAppSelector } from "@/hooks/context.hook";
+import Modal from "@/services/modal/Modal";
 import { useState, useRef, useEffect } from "react";
-import Loading from "../components/Loading";
-import Layout from "../components/Layout";
+import Loading from "@/components/shared/Loading";
+import Layout from "@/components/shared/Layout";
 import Link from "next/link";
 
 const Home: NextPage = () => {

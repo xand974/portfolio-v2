@@ -1,7 +1,7 @@
-import "../styles/globals.scss";
+import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
-import { store } from "../context/store";
+import { store } from "@/context/store";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
 function MyApp({ Component, pageProps }: AppProps) {

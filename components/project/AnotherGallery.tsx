@@ -1,4 +1,4 @@
-import styles from "../styles/another-gallery.module.scss";
+import styles from "@/styles/another-gallery.module.scss";
 import Image from "next/image";
 
 export default function AnotherGallery() {

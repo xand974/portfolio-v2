@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import styles from "../styles/cadre.module.scss";
-import { CadreType } from "../types/cadre";
-import { useOnScreen } from "../hooks/on-screen.hook";
+import styles from "@/styles/cadre.module.scss";
+import { CadreType } from "@/types/cadre";
+import { useOnScreen } from "@/hooks/on-screen.hook";
 import cls from "classnames";
 
 export default function Cadre({ reverse = false }: CadreType) {

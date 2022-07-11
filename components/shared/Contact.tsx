@@ -1,6 +1,6 @@
-import styles from "../styles/contact.module.scss";
+import styles from "@/styles/contact.module.scss";
 import { EmailOutlined } from "@mui/icons-material";
-import { ModalService } from "../modal/modal.service";
+import { ModalService } from "@/services/modal/modal.service";
 import ContactForm from "./ContactForm";
 import { useDispatch } from "react-redux";
 

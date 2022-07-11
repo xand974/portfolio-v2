@@ -1,4 +1,4 @@
-import styles from "../styles/gallery.module.scss";
+import styles from "@/styles/gallery.module.scss";
 import Cadre from "./Cadre";
 
 export default function Gallery() {

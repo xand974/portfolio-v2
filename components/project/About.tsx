@@ -1,7 +1,7 @@
-import styles from "../styles/about.module.scss";
+import styles from "@/styles/about.module.scss";
 import { useRef, useEffect } from "react";
-import { getSplitSpan, appearText } from "../utils/animations-utils";
-import { useOnScreen } from "../hooks/on-screen.hook";
+import { getSplitSpan, appearText } from "@/utils/animations-utils";
+import { useOnScreen } from "@/hooks/on-screen.hook";
 
 export default function About() {
   const paragraphRef = useRef<HTMLParagraphElement>(null);
