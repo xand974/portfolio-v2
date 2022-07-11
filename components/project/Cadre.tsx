@@ -4,6 +4,7 @@ import styles from "@/styles/cadre.module.scss";
 import { CadreType } from "@/types/cadre";
 import { useOnScreen } from "@/hooks/on-screen.hook";
 import cls from "classnames";
+import { CLIFF_IMG } from "mock/data";
 
 export default function Cadre({ reverse = false }: CadreType) {
   const cadreRef = useRef<HTMLDivElement>(null);
@@ -34,9 +35,7 @@ export default function Cadre({ reverse = false }: CadreType) {
         <Image
           alt="et si"
           layout="fill"
-          src={
-            "https://images.unsplash.com/photo-1541657152021-21efeed08add?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-          }
+          src={CLIFF_IMG}
           objectFit="cover"
           style={{ borderRadius: "3px" }}
         />

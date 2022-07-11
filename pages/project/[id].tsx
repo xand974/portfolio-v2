@@ -11,7 +11,7 @@ import Slider from "@/components/project/Slider";
 
 export default function Project() {
   return (
-    <Layout>
+    <Layout direction="vertical">
       <Navbar />
       <Header />
       <Gallery />

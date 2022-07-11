@@ -4,7 +4,8 @@ import styles from "@/styles/Home.module.scss";
 import { useState, useRef, useEffect } from "react";
 import Loading from "@/components/shared/Loading";
 import Layout from "@/components/shared/Layout";
-import Link from "next/link";
+import Grid from "@/components/intro/Grid";
+import Overview from "@/components/intro/Overview";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
@@ -36,8 +37,15 @@ const Home: NextPage = () => {
         <meta name="description" content="Alexandre Malet's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
-        <Link href="/project/123">GO TO PROJECTS</Link>
+      <Layout direction="horizontal">
+        <div
+          className="main"
+          data-scroll-container
+          data-scroll-direction="horizontal"
+        >
+          <Grid />
+        </div>
+        <Overview />
       </Layout>
     </div>
   );

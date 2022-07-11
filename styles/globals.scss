@@ -1,8 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/monoglyceride");
 
 :root {
   --dark-blue: #060526;
   --light-gray: #efefef;
+  --gradient-blue: linear-gradient(
+    60deg,
+    rgba(234, 239, 255, 1) 10%,
+    rgba(255, 240, 240, 1) 36%,
+    rgba(193, 208, 255, 1) 54%,
+    rgba(193, 205, 255, 1) 98%
+  );
+  --gradient-animated: linear-gradient(
+    21deg,
+    rgba(234, 239, 255, 1) 10%,
+    rgba(255, 240, 240, 1) 36%,
+    rgba(193, 208, 255, 1) 54%,
+    rgba(193, 205, 255, 1) 98%
+  );
   --mid-gray: #191919;
   --primary-ff: "Raleway", sans-serif;
 }

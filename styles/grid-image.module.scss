@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+    border-radius: 9px;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__description {
+    text-align: left;
+    color: var(--light-gray);
+  }
+}

@@ -5,8 +5,9 @@ import { useAppSelector } from "@/hooks/context.hook";
 
 type LayoutType = {
   children: React.ReactNode;
+  direction: "horizontal" | "vertical";
 };
-export default function Layout({ children }: LayoutType) {
+export default function Layout({ children, direction }: LayoutType) {
   const containerRef = useRef(null);
   const { open, element } = useAppSelector((state) => state.modal);
 
@@ -17,6 +18,7 @@ export default function Layout({ children }: LayoutType) {
     smoothMobile: true,
     multiplier: 1,
     class: "is-reveal",
+    direction: direction,
   });
   return (
     <>
