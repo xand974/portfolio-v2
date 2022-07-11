@@ -1,15 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "@/styles/Home.module.scss";
-import { useAppSelector } from "@/hooks/context.hook";
-import Modal from "@/services/modal/Modal";
 import { useState, useRef, useEffect } from "react";
 import Loading from "@/components/shared/Loading";
 import Layout from "@/components/shared/Layout";
 import Link from "next/link";
 
 const Home: NextPage = () => {
-  const { open, element } = useAppSelector((state) => state.modal);
   const [loading, setLoading] = useState(true);
   const [timer, setTimer] = useState(2);
   const intervalRef = useRef<NodeJS.Timer>();
@@ -42,7 +39,6 @@ const Home: NextPage = () => {
       <Layout>
         <Link href="/project/123">GO TO PROJECTS</Link>
       </Layout>
-      {open ? <Modal child={element} /> : <></>}
     </div>
   );
 };
