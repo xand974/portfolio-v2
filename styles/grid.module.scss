@@ -1,0 +1,26 @@
+.container {
+  width: 300vw;
+  height: 100vh;
+  position: relative;
+  background: var(--gradient-blue);
+  &__wrapper {
+    &__title {
+      position: absolute;
+      font-size: 15rem;
+      font-family: monoglyceride sans-serif;
+      top: 50%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      color: white;
+      text-shadow: 0 0 10px #f0fcff;
+    }
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(40, 5%);
+      grid-template-rows: repeat(40, 5%);
+      align-items: center;
+      height: 100vh;
+    }
+  }
+}
