@@ -45,8 +45,8 @@ const Home: NextPage = () => {
         >
           <Grid />
         </div>
-        <Overview />
       </Layout>
+      <Overview />
     </div>
   );
 };

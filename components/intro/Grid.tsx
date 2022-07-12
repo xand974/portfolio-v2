@@ -8,7 +8,7 @@ export default function Grid() {
       <GridImage
         src={el}
         index={index}
-        offset={id * 4}
+        offset={id * 10}
         key={index}
         description="yes"
       />
