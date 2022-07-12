@@ -28,7 +28,7 @@ export default function Cadre({ reverse = false }: CadreType) {
       style={{ flexDirection: reverse ? "row-reverse" : "row" }}
     >
       <span data-scroll className={getSpanRotationStyle} style={{}}>
-        Small One {reverse ? "yes" : "no"}
+        Small One
       </span>
 
       <div className={getExpandCadreStyle} id="img-path">

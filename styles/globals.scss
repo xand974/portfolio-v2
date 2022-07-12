@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("http://fonts.cdnfonts.com/css/monoglyceride");
-
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;300&family=Amatic+SC&family=Amiri:ital,wght@0,400;0,700;1,700&family=Jost:wght@100;200;300;400&family=Neonderthaw&display=swap");
 :root {
   --dark-blue: #060526;
   --light-gray: #efefef;
@@ -10,6 +10,12 @@
     rgba(255, 240, 240, 1) 36%,
     rgba(193, 208, 255, 1) 54%,
     rgba(193, 205, 255, 1) 98%
+  );
+  --gradient-dark-blue: linear-gradient(
+    180deg,
+    #292933 0%,
+    #181e27 57.81%,
+    #050617 100%
   );
   --gradient-animated: linear-gradient(
     21deg,
