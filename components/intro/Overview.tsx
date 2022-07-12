@@ -96,20 +96,13 @@ export default function Overview() {
     setLeft(leftCoordinate);
   }, [containerRef.current?.getBoundingClientRect()]);
 
-  console.log(left);
-
   return (
     <section
       data-scroll-section
       className={styles.container}
       ref={containerRef}
-      style={{ zIndex: left < 20 ? "2" : "-2" }}
     >
-      <div
-        data-scroll
-        data-scroll-speed="-3"
-        className={styles.container__wrapper}
-      >
+      <div data-scroll className={styles.container__wrapper}>
         <Left />
         <Divider />
         <Right />
