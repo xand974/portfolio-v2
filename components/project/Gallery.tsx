@@ -4,8 +4,8 @@ import Cadre from "./Cadre";
 export default function Gallery() {
   return (
     <section className={styles.gallery} data-scroll-section>
-      <Cadre reverse={false} />
-      <Cadre reverse={true} />
+      <Cadre showStacks={false} reverse={false} />
+      <Cadre showStacks={false} reverse={true} />
     </section>
   );
 }

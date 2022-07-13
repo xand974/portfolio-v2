@@ -5,12 +5,17 @@ import { CadreType } from "@/types/cadre";
 import { useOnScreen } from "@/hooks/on-screen.hook";
 import cls from "classnames";
 import { CLIFF_IMG } from "mock/data";
+import AngularIcon from "../../assets/icons/angular-icon.svg";
+import SvgImage from "../@shared/SvgImage";
 
-export default function Cadre({ reverse = false }: CadreType) {
+export default function Cadre({
+  reverse = false,
+  showStacks = false,
+}: CadreType) {
   const cadreRef = useRef<HTMLDivElement>(null);
   const [isOnScreen] = useOnScreen(cadreRef);
 
-  const getExpandCadreStyle = cls({
+  const getExpandCadreStyle = cls(styles.cadre__image__default, {
     [styles["cadre__image--expand"]]: isOnScreen,
     [styles.cadre__image]: !isOnScreen,
   });
@@ -40,6 +45,15 @@ export default function Cadre({ reverse = false }: CadreType) {
           style={{ borderRadius: "3px" }}
         />
       </div>
+      {showStacks && (
+        <div className={styles.cadre__stacks}>
+          <SvgImage style={styles.cadre__stacks__icon} />
+          <SvgImage style={styles.cadre__stacks__icon} />
+          <SvgImage style={styles.cadre__stacks__icon} />
+          <SvgImage style={styles.cadre__stacks__icon} />
+        </div>
+      )}
+
       <div className={styles.cadre__container}>
         <h3
           className={styles.cadre__container__title}
