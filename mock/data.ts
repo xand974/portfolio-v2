@@ -1,3 +1,5 @@
+import { LinkType } from "@/types/link";
+
 export const BALLON_IMG =
   "https://images.unsplash.com/photo-1657497850517-ef3c57b867c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80";
 
@@ -16,4 +18,15 @@ export const GRID = [
   [6, 9, 1, 1],
   [14, 2, 1, 1],
   [12, 10, 1, 1],
+];
+
+export const LINKS: LinkType[] = [
+  {
+    title: "RESUME",
+    link: "https://malet.notion.site/Resume-Alexandre-Malet-531d1c9ee7aa44c39cddc1b5f6734184",
+  },
+  { title: "ABOUT ME", link: "about-me" },
+  { title: "PROJECTS", link: "projects" },
+  { title: "SKILLS", link: "skills" },
+  { title: "CONTACT ME", link: "mailto:xand974@gmail.com" },
 ];
