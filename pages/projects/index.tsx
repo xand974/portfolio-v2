@@ -1,6 +1,6 @@
 import styles from "@/styles/projects/projects.module.scss";
 import Navbar from "@/components/shared/Navbar";
-import ProjectCard from "../../components/projects/ProjectCard";
+// import ProjectCard from "../../components/projects/ProjectCard";
 
 export default function Projects() {
   return (
@@ -10,6 +10,7 @@ export default function Projects() {
           <h1 className={styles.container__wrapper__top__title}>Projects</h1>
         </div>
         <div className={styles.container__wrapper__grid}>
+          {/* <ProjectCard />
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
@@ -21,8 +22,7 @@ export default function Projects() {
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard /> */}
         </div>
         <Navbar />
       </div>
