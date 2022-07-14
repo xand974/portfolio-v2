@@ -42,7 +42,7 @@ export default function Cadre({
           layout="fill"
           src={CLIFF_IMG}
           objectFit="cover"
-          style={{ borderRadius: "3px" }}
+          style={{ borderRadius: "10px" }}
         />
       </div>
       {showStacks && (

@@ -10,7 +10,6 @@ export const OverviewLink = () => {
   return (
     <div data-scroll className={styles.left}>
       <div className={styles.left__wrapper}>
-        <h1 className={styles.left__wrapper__code}>{"<html>"}</h1>
         <div className={styles.left__wrapper__list}>
           {LINKS.map((item, index) => (
             <div
@@ -22,7 +21,6 @@ export const OverviewLink = () => {
             </div>
           ))}
         </div>
-        <h1 className={styles.left__wrapper__code}>{"</html>"}</h1>
       </div>
     </div>
   );

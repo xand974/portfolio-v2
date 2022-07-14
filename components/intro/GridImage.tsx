@@ -34,9 +34,9 @@ export default function GridImage({
     >
       <div
         className={styles.container__wrapper}
-        style={{ transform: `scale(${isOnScreen ? 1.1 : 0.3})` }}
+        style={{ transform: `scale(${isOnScreen ? 1.4 : 0.3})` }}
       >
-        <Image src={src} layout="fill" style={{ borderRadius: "10px" }} />
+        <Image src={src} layout="fill" alt="some random landscape" style={{ borderRadius: "10px" }} />
       </div>
       <p className={styles.container__description}>{description}</p>
     </div>

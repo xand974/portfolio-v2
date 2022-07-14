@@ -15,13 +15,12 @@
       background: none;
       &__icon {
         transform: rotate(-90deg);
-        color: var(--white);
         cursor: pointer;
       }
     }
   }
   &__wrapper {
-    background: var(--gradient-transparent);
+    background: var(--white);
     height: 100%;
     width: 100%;
     display: grid !important;
@@ -34,7 +33,7 @@
       width: 1px;
       left: 45%;
       right: 55%;
-      background: var(--white);
+      background: var(--black);
     }
 
     .sidebar {
@@ -45,7 +44,7 @@
       &::before {
         content: "";
         position: absolute;
-        background: var(--soft-blue);
+        background: var(--black);
         height: 100px;
         width: 1px;
         left: 50%;
@@ -55,7 +54,7 @@
       &::after {
         content: "";
         position: absolute;
-        background: var(--soft-blue);
+        background: var(--black);
         height: 100px;
         width: 1px;
         left: 50%;

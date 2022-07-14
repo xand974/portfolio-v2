@@ -59,7 +59,7 @@ export default function Overview() {
           onClick={() => toggleExpand()}
           style={{ transform: expand ? "rotate(90deg)" : "rotate(-90deg)" }}
         >
-          <ArrowForwardIos className={animation} />
+          <ArrowForwardIos className={animation}  style={{ color: expand ? "black" : "white" }} />
         </button>
       </div>
       <div className={styles.container__wrapper}>
