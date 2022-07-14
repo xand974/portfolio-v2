@@ -2,8 +2,10 @@
   width: 300vw;
   height: 100vh;
   position: relative;
-  // background: var(--gradient-blue);
   background: #000;
+  &.light--on {
+    background: var(--gradient-blue);
+  }
   &__lamp {
     position: absolute;
     top: 60px;
@@ -27,8 +29,8 @@
       white-space: nowrap;
       color: rgb(197, 197, 197);
       &.light--on {
-        color: white;
-        text-shadow: 0 0 10px #f0fcff;
+        color: rgb(112, 112, 112);
+        text-shadow: 0 0 10px rgb(170, 170, 170);
       }
     }
     &__grid {

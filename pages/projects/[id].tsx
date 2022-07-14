@@ -5,7 +5,7 @@ import Footer from "@/components/project/Footer";
 import Gallery from "@/components/project/Gallery";
 import Header from "@/components/project/Header";
 import Layout from "@/components/shared/Layout";
-import Navbar from "@/components/project/Navbar";
+import Navbar from "@/components/shared/Navbar";
 import Skills from "@/components/project/Skills";
 import Slider from "@/components/project/Slider";
 

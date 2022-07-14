@@ -13,6 +13,9 @@ export default function Grid() {
   const titleClass = cls(styles.container__wrapper__title, {
     [styles["light--on"]]: lightOn,
   });
+  const containerClass = cls(styles.container, {
+    [styles["light--on"]]: lightOn,
+  });
   const showLight = () => {
     dispatch(SET_LIGHT(true));
   };
@@ -32,13 +35,13 @@ export default function Grid() {
     ));
   });
   return (
-    <main className={styles.container} data-scroll-section>
+    <main className={containerClass} data-scroll-section>
       <div className={styles.container__lamp} onClick={() => showLight()}>
         <WbIncandescentOutlined className={lightIconClass} />
       </div>
       <div className={styles.container__wrapper}>
         <h1 className={titleClass} data-scroll data-scroll-speed="3">
-          Turn on the light
+          {lightOn ? "Welcome !" : "Turn on the light.."}
         </h1>
         <section className={styles.container__wrapper__grid}>
           {lightOn && images}
