@@ -1,6 +1,6 @@
-import ProjectCard from "@/components/projects/ProjectCard";
 import styles from "@/styles/projects/projects.module.scss";
 import Navbar from "@/components/shared/Navbar";
+import ProjectCard from "@/components/projects/ProjectCard";
 
 export default function Projects() {
   return (
