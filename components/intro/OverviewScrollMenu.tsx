@@ -3,7 +3,7 @@ import cls from "classnames";
 import Image from "next/image";
 import { JAPAN_STREET_IMG } from "mock/data";
 import { KeyboardArrowDown } from "@mui/icons-material";
-import Cadre from "../project/Cadre";
+import Cadre from "../single-project/Cadre";
 
 export const OverviewScrollMenu = () => {
   const animation = cls(styles.arrow__icon, styles["bounce--animation"]);

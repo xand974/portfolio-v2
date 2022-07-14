@@ -1,4 +1,4 @@
-import styles from "@/styles/header.module.scss";
+import styles from "@/styles/single-project/header.module.scss";
 import { useEffect, useRef } from "react";
 import { getSplitSpan, moveToTop } from "@/utils/animations-utils";
 

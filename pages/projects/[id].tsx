@@ -1,13 +1,13 @@
-import About from "@/components/project/About";
-import AnotherGallery from "@/components/project/AnotherGallery";
+import About from "@/components/single-project/About";
+import AnotherGallery from "@/components/single-project/AnotherGallery";
 import Contact from "@/components/shared/Contact";
-import Footer from "@/components/project/Footer";
-import Gallery from "@/components/project/Gallery";
-import Header from "@/components/project/Header";
+import Footer from "@/components/single-project/Footer";
+import Gallery from "@/components/single-project/Gallery";
+import Header from "@/components/single-project/Header";
 import Layout from "@/components/shared/Layout";
 import Navbar from "@/components/shared/Navbar";
-import Skills from "@/components/project/Skills";
-import Slider from "@/components/project/Slider";
+import Skills from "@/components/single-project/Skills";
+import Slider from "@/components/single-project/Slider";
 
 export default function Project() {
   return (

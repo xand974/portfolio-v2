@@ -2,7 +2,7 @@ import { CloseOutlined, MenuOutlined } from "@mui/icons-material";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/styles/navbar.module.scss";
 import { LinkType } from "@/types/index";
-import CustomLink from "../project/CustomLink";
+import CustomLink from "../single-project/CustomLink";
 
 export default function Navbar() {
   const [expand, setExpand] = useState(false);

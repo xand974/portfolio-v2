@@ -1,4 +1,4 @@
-import styles from "@/styles/about.module.scss";
+import styles from "@/styles/single-project/about.module.scss";
 import { useRef, useEffect } from "react";
 import { getSplitSpan, appearText } from "@/utils/animations-utils";
 import { useOnScreen } from "@/hooks/on-screen.hook";

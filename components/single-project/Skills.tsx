@@ -1,4 +1,4 @@
-import styles from "@/styles/skills.module.scss";
+import styles from "@/styles/single-project/skills.module.scss";
 
 export default function Skills() {
   return (

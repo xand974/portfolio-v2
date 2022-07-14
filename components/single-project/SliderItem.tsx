@@ -1,4 +1,4 @@
-import styles from "@/styles/slider-item.module.scss";
+import styles from "@/styles/single-project/slider-item.module.scss";
 import { JAPAN_STREET_IMG } from "mock/data";
 import Image from "next/image";
 export default function SliderItem() {

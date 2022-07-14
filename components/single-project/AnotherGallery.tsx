@@ -1,4 +1,4 @@
-import styles from "@/styles/another-gallery.module.scss";
+import styles from "@/styles/single-project/another-gallery.module.scss";
 import { CLIFF_IMG } from "mock/data";
 import Image from "next/image";
 

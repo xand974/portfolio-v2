@@ -1,5 +1,5 @@
 import { GitHub, LinkedIn } from "@mui/icons-material";
-import styles from "@/styles/footer.module.scss";
+import styles from "@/styles/single-project/footer.module.scss";
 import Image from "next/image";
 
 export default function Footer() {
