@@ -2,6 +2,7 @@ import styles from "@/styles/projects/projects-single.module.scss";
 import Image from "next/image";
 import { JAPAN_STREET_IMG } from "mock/data";
 import { useRouter } from "next/router";
+
 export default function ProjectCard() {
   const router = useRouter();
   const goTo = (id: string) => {
