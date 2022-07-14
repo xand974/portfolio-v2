@@ -5,7 +5,7 @@ import { CadreType } from "@/types/cadre";
 import { useOnScreen } from "@/hooks/on-screen.hook";
 import cls from "classnames";
 import { CLIFF_IMG } from "mock/data";
-import AngularIcon from "../../assets/icons/angular-icon.svg";
+// import AngularIcon from "../../assets/icons/angular-icon.svg";
 import SvgImage from "../@shared/SvgImage";
 
 export default function Cadre({
