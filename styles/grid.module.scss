@@ -4,6 +4,18 @@
   position: relative;
   // background: var(--gradient-blue);
   background: #000;
+  &__lamp {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    &__icon {
+      color: white;
+      font-size: 3rem !important;
+      &.hide {
+        opacity: 0;
+      }
+    }
+  }
   &__wrapper {
     &__title {
       position: absolute;
@@ -13,8 +25,11 @@
       left: 20%;
       transform: translate(-50%, -50%);
       white-space: nowrap;
-      color: white;
-      text-shadow: 0 0 10px #f0fcff;
+      color: rgb(197, 197, 197);
+      &.light--on {
+        color: white;
+        text-shadow: 0 0 10px #f0fcff;
+      }
     }
     &__grid {
       display: grid;

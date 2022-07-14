@@ -9,6 +9,7 @@ import {
 } from "@mui/icons-material";
 import cls from "classnames";
 import { OverviewLink } from "./OverviewLinks";
+import { useAppSelector } from "../../hooks/context.hook";
 
 //#region Nested Component
 
@@ -30,11 +31,15 @@ const Sidebar = () => (
 export default function Overview() {
   const containerRef = useRef<HTMLElement>(null);
   const [expand, setExpand] = useState(false);
+  const { lightOn } = useAppSelector((state) => state.grid);
 
   const toggleExpand = () => {
     setExpand((prev) => (prev = !prev));
   };
 
+  const buttonExpandClass = cls(styles.container__top__btn, {
+    [styles["light--on"]]: lightOn,
+  });
   const animation = cls(
     styles.container__top__btn__icon,
     styles["bounce--animation-x"]
@@ -55,11 +60,14 @@ export default function Overview() {
         }}
       >
         <button
-          className={styles.container__top__btn}
+          className={buttonExpandClass}
           onClick={() => toggleExpand()}
           style={{ transform: expand ? "rotate(90deg)" : "rotate(-90deg)" }}
         >
-          <ArrowForwardIos className={animation}  style={{ color: expand ? "black" : "white" }} />
+          <ArrowForwardIos
+            className={animation}
+            style={{ color: expand ? "black" : "white" }}
+          />
         </button>
       </div>
       <div className={styles.container__wrapper}>
