@@ -4,7 +4,7 @@
   position: relative;
   background: #000;
   &.light--on {
-    background: var(--gradient-blue);
+    background: var(--gradient-transparent);
   }
   &__lamp {
     position: absolute;
@@ -29,8 +29,8 @@
       white-space: nowrap;
       color: rgb(197, 197, 197);
       &.light--on {
-        color: rgb(112, 112, 112);
-        text-shadow: 0 0 10px rgb(170, 170, 170);
+        color: rgb(250 250 250);
+        text-shadow: 0 0 4px var(--white);
       }
     }
     &__grid {
@@ -41,5 +41,10 @@
       height: 100vh;
       width: 200vw;
     }
+  }
+}
+@media screen and (max-width: 1030px) {
+  .container {
+    display: none;
   }
 }

@@ -87,3 +87,24 @@
     }
   }
 }
+
+@media screen and (max-width: 1030px) {
+  .container {
+    &__wrapper {
+      display: grid !important;
+      flex-direction: column;
+      background: none;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      &__list {
+        position: static;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+      }
+      &__divider {
+        position: static;
+      }
+    }
+  }
+}

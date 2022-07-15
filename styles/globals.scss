@@ -13,15 +13,17 @@
   --certain-white: rgb(255, 255, 255);
   --soft-blue: #eefaff;
   --white: #fff;
-  --gradient-transparent: linear-gradient(
-    10deg,
-    #3c6affdb,
-    #5074e9ad,
-    #6187ffad,
-    #5e84ffad,
-    #93acffad,
-    #fefffc87
-  );
+  --gradient-transparent: linear-gradient(to bottom, #e2e2e2, #c9d6ff);
+  // --gradient-transparent: linear-gradient(
+  //   10deg,
+  //   #3c6affdb,
+  //   #5074e9ad,
+  //   #6187ffad,
+  //   #5e84ffad,
+  //   #93acffad,
+  //   #fefffc87
+  // );
+
   --dark-blue: rgb(8 8 36);
   --gradient-blue: linear-gradient(
     60deg,
@@ -170,4 +172,10 @@ html.has-scroll-dragging {
   border-radius: 50%;
   pointer-events: none;
   transition: background 0.5s;
+}
+
+@mixin mobile {
+  @media screen and (max-width: 1030px) {
+    @content;
+  }
 }

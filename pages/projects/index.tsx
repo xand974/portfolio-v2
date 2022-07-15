@@ -1,5 +1,5 @@
 import styles from "@/styles/projects/projects.module.scss";
-import Navbar from "@/components/shared/Navbar";
+import Navbar from "@/components/@shared/Navbar";
 import ProjectCard from "@/components/single-project/ProjectCard";
 
 export default function Projects() {

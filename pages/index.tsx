@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "@/styles/Home.module.scss";
 import { useState, useRef, useEffect } from "react";
-import Loading from "@/components/shared/Loading";
-import Layout from "@/components/shared/Layout";
+import Loading from "@/components/@shared/Loading";
+import Layout from "@/components/@shared/Layout";
 import Grid from "@/components/intro/Grid";
 import Overview from "@/components/intro/Overview";
 
@@ -37,9 +37,9 @@ const Home: NextPage = () => {
         <meta name="description" content="Alexandre Malet's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout direction="horizontal">
+      <Layout direction="horizontal" enableMobile={false}>
         <div
-          className="main"
+          className={styles.main}
           data-scroll-container
           data-scroll-direction="horizontal"
         >

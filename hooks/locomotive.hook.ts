@@ -11,6 +11,8 @@ type Props = {
   multiplier: number;
   class: string;
   loading?: boolean;
+  mobile?: any;
+  tablet?: any;
 } & Omit<LocomotiveScrollOptions, "el">;
 
 export const useLocoScroll = ({
