@@ -36,6 +36,13 @@ export const GRID = [
   [12, 10, 1, 1],
 ];
 
+export const PROJECTS_GRID = [
+  [1, 1, 2, 2],
+  [2, 1, 1, 1],
+  [3, 1, 3, 3],
+  [4, 1, 2, 2],
+];
+
 export const LINKS: LinkType[] = [
   {
     title: "RESUME",
