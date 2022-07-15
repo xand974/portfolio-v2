@@ -164,14 +164,18 @@ html.has-scroll-dragging {
   width: 40px;
   height: 40px;
   background: none;
-  border: 3px solid white;
-  box-shadow: 0 0 20px white;
+  border: 3px solid var(--white);
+  box-shadow: 0 0 20px var(--white);
   position: absolute;
   z-index: 999999999;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   pointer-events: none;
   transition: background 0.5s;
+  &.cursor-dark {
+    border: 3px solid rgb(33, 33, 49);
+    box-shadow: 0 0 20px var(--ocean-dark-blue);
+  }
 }
 
 @mixin mobile {

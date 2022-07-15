@@ -11,6 +11,7 @@
     aspect-ratio: 1;
     position: relative;
     border-radius: 9px;
+    transition: all 0.3s ease-in-out;
   }
   &:hover {
     box-shadow: 0 0 30px white;

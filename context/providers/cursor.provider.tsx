@@ -2,11 +2,13 @@ import { useState, useEffect, createContext } from "react";
 
 type CursorContextType = string | boolean;
 import cls from "classnames";
+import { useAppSelector } from "../../hooks/context.hook";
 
 export const CursorContext = createContext<CursorContextType>("cursorContext");
 
 const CursorProvider = ({ children }: { children: JSX.Element }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const { lightOn } = useAppSelector((state) => state.grid);
   const [cursor, setCursor] = useState<string | boolean>(false);
   const SUPPORTED_CURSORS = [false, "pointer", "right", "left"];
   useEffect(() => {
@@ -28,6 +30,7 @@ const CursorProvider = ({ children }: { children: JSX.Element }) => {
       <ins
         className={cls("circle-cursor", {
           active: !!cursor,
+          ["cursor-dark"]: lightOn,
           [`cursor-${cursor}`]: !!cursor,
         })}
         style={{
