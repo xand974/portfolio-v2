@@ -22,7 +22,7 @@ export default function Loading() {
       dispatch(SET_LOADING(false));
     };
     setTextEffect();
-  }, []);
+  }, [dispatch]);
   return (
     <div className={styles.loading}>
       <h1 className={styles.loading__text} ref={titleRef}>
