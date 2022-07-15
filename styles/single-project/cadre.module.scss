@@ -105,3 +105,33 @@
 .expand-cadre {
   background: red;
 }
+
+@media screen and (max-width: 768px) {
+  .cadre {
+    flex-direction: column !important;
+    margin: 60px 0 !important;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 30px;
+    &__image {
+      &__sm__text {
+        display: none;
+      }
+    }
+    &__container {
+      width: 100%;
+      padding: 0;
+      &__title {
+        font-size: 1.2rem;
+      }
+      &__text {
+        font-size: 0.7rem;
+        line-height: 1.4;
+      }
+    }
+    &__stacks {
+      top: -50px;
+      bottom: initial;
+    }
+  }
+}

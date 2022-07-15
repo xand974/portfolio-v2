@@ -43,8 +43,8 @@
     }
   }
 }
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 768px) {
   .container {
-    display: none;
+    display: none !important;
   }
 }

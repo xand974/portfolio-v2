@@ -77,3 +77,27 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .left {
+    &__wrapper {
+      &__list {
+        position: initial;
+        flex-direction: row;
+        padding: 10px 0;
+        &::before {
+          content: "";
+        }
+        &::after {
+          content: "";
+        }
+        &__item {
+          font-size: 0.9rem;
+          margin-bottom: 0;
+          letter-spacing: 1px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

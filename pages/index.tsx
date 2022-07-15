@@ -37,7 +37,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Alexandre Malet's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout direction="horizontal" enableMobile={false}>
+      <Layout direction="horizontal" enableMobile={true}>
         <div
           className={styles.main}
           data-scroll-container

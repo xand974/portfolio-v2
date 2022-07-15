@@ -88,8 +88,11 @@
   }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 768px) {
   .container {
+    &__top {
+      display: none;
+    }
     &__wrapper {
       display: grid !important;
       flex-direction: column;
@@ -103,7 +106,21 @@
         flex-direction: row;
       }
       &__divider {
-        position: static;
+        display: none;
+      }
+    }
+  }
+  .sidebar {
+    display: none;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    right: initial !important;
+    top: initial !important;
+    transform: rotateZ(90deg) translate(35vh, -50%) !important;
+    &__icons {
+      .icon {
+        transform: rotate(-90deg);
       }
     }
   }
