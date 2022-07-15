@@ -23,10 +23,11 @@ export default function Loading() {
     };
     setTextEffect();
   }, [dispatch]);
+
   return (
     <div className={styles.loading}>
       <h1 className={styles.loading__text} ref={titleRef}>
-        Malet's Portfolio
+        {" Malet's Portfolio"}
       </h1>
     </div>
   );
