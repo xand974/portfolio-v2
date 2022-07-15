@@ -1,13 +1,16 @@
-import { CloseOutlined, MenuOutlined } from "@mui/icons-material";
-import { useEffect, useRef, useState } from "react";
+import { MenuOutlined } from "@mui/icons-material";
+import { useRef, useState } from "react";
 import styles from "@/styles/navbar.module.scss";
 import { LinkType } from "@/types/index";
 import CustomLink from "../single-project/CustomLink";
-
+import cls from "classnames";
 export default function Navbar() {
   const [expand, setExpand] = useState(false);
   const [list, setList] = useState<HTMLLIElement[]>([]);
   const listRef = useRef<HTMLUListElement>(null);
+  const setListClassName = cls(styles.navbar__list, {
+    [styles["navbar__list--expand"]]: expand,
+  });
 
   //#region  wip
   // useEffect(() => {
@@ -77,23 +80,11 @@ export default function Navbar() {
       <div className={styles.navbar__container}>
         <button
           className={styles.navbar__container__btn}
-          onClick={() => setExpand(true)}
+          onClick={() => setExpand((prev) => !prev)}
         >
           <MenuOutlined className={styles.navbar__container__btn__icon} />
         </button>
-        <ul
-          className={styles.navbar__list}
-          ref={listRef}
-          style={{
-            transform: expand ? `translateX(0vw)` : `translateX(125vw)`,
-          }}
-        >
-          <button
-            className={styles.navbar__container__btn__collapse}
-            onClick={() => setExpand(false)}
-          >
-            <CloseOutlined />
-          </button>
+        <ul className={setListClassName} ref={listRef}>
           {menuItems.map((item, index) => (
             <CustomLink title={item.title} link={item.link} key={index} />
           ))}

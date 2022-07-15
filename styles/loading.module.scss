@@ -9,4 +9,10 @@
 
 .loading__text {
   color: #fff;
+  font-weight: lighter;
+  > span {
+    > span {
+      opacity: 0;
+    }
+  }
 }

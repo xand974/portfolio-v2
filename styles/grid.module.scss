@@ -6,6 +6,15 @@
   &.light--on {
     background: var(--gradient-transparent);
   }
+  .right__arrow {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    color: var(--certain-white);
+    &__icon {
+      font-size: 3rem;
+    }
+  }
   &__lamp {
     position: absolute;
     top: 60px;
@@ -27,7 +36,7 @@
       left: 20%;
       transform: translate(-50%, -50%);
       white-space: nowrap;
-      color: rgb(197, 197, 197);
+      color: var(--certain-white);
       &.light--on {
         color: rgb(250 250 250);
         text-shadow: 0 0 4px var(--white);
@@ -46,5 +55,8 @@
 @media screen and (max-width: 768px) {
   .container {
     display: none !important;
+    .right__arrow {
+      display: none;
+    }
   }
 }

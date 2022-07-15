@@ -68,8 +68,15 @@
       &__icons {
         display: flex;
         flex-direction: column;
-        .icon {
-          margin: 10px 0;
+        .btn {
+          border: none;
+          background: none;
+          .icon {
+            margin: 10px 0;
+            &:hover {
+              color: var(--ocean-dark-blue);
+            }
+          }
         }
       }
     }
@@ -90,6 +97,8 @@
 
 @media screen and (max-width: 768px) {
   .container {
+    overflow: scroll;
+    top: 0;
     &__top {
       display: none;
     }
@@ -119,8 +128,12 @@
     top: initial !important;
     transform: rotateZ(90deg) translate(35vh, -50%) !important;
     &__icons {
-      .icon {
-        transform: rotate(-90deg);
+      .btn {
+        border: none;
+        background: none;
+        .icon {
+          transform: rotate(-90deg);
+        }
       }
     }
   }

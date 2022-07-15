@@ -10,6 +10,9 @@ import {
 import cls from "classnames";
 import { OverviewLink } from "./OverviewLinks";
 import { useAppSelector } from "../../hooks/context.hook";
+import CustomIcon from "../@shared/CustomIcon";
+import { SIDEBAR_ICONS } from "mock/data";
+import { useRouter } from "next/router";
 
 //#region Nested Component
 
@@ -17,15 +20,31 @@ const Divider = () => (
   <div className={styles.container__wrapper__divider}></div>
 );
 
-const Sidebar = () => (
-  <div className={styles.sidebar}>
-    <div className={styles.sidebar__icons}>
-      <Twitter className={styles.icon} />
-      <GitHub className={styles.icon} />
-      <LinkedIn className={styles.icon} />
+const Sidebar = () => {
+  const router = useRouter();
+
+  const goTo = async (tag: string) => {
+    switch (tag) {
+      case "GitHub":
+        return await router.push("https://github.com/xand974");
+      case "LinkedIn":
+        return await router.push(
+          "https://www.linkedin.com/in/alexandre-malet-5a3432208/"
+        );
+    }
+  };
+  return (
+    <div className={styles.sidebar}>
+      <div className={styles.sidebar__icons}>
+        {SIDEBAR_ICONS.map((item, id) => (
+          <button key={id} className={styles.btn} onClick={() => goTo(item)}>
+            <CustomIcon className={styles.icon} iconName={item} />
+          </button>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 //#endregion
 
 export default function Overview() {

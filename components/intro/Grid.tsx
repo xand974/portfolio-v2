@@ -6,6 +6,7 @@ import cls from "classnames";
 import { useDispatch } from "react-redux";
 import { SET_LIGHT } from "@/context/slices/grid.slice";
 import { useAppSelector } from "@/hooks/context.hook";
+import { ArrowForwardOutlined } from "@mui/icons-material";
 
 export default function Grid() {
   const dispatch = useDispatch();
@@ -36,6 +37,13 @@ export default function Grid() {
   });
   return (
     <main className={containerClass} data-scroll-section>
+      {lightOn ? (
+        <></>
+      ) : (
+        <div className={styles.right__arrow} data-scroll data-scroll-speed="-4">
+          <ArrowForwardOutlined className={styles.right__arrow__icon} />
+        </div>
+      )}
       <div className={styles.container__lamp} onClick={() => showLight()}>
         <WbIncandescentOutlined className={lightIconClass} />
       </div>

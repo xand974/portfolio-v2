@@ -6,10 +6,12 @@ import Loading from "@/components/@shared/Loading";
 import Layout from "@/components/@shared/Layout";
 import Grid from "@/components/intro/Grid";
 import Overview from "@/components/intro/Overview";
+import { useAppSelector } from "../hooks/context.hook";
 
 const Home: NextPage = () => {
+  const { loading: appLoading } = useAppSelector((state) => state.app);
   const [loading, setLoading] = useState(true);
-  const [timer, setTimer] = useState(2);
+  const [timer, setTimer] = useState(4);
   const intervalRef = useRef<NodeJS.Timer>();
 
   const clear = () => {
